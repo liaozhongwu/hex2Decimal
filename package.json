@@ -1,0 +1,23 @@
+{
+  "name": "hex2Decimal",
+  "version": "0.0.1",
+  "description": "convert hex string to decimal string",
+  "author": {
+    "name": "liaozhongwu",
+    "email": "liaozhongwu95@gmail.com"
+  },
+  "keywords": [
+    "hex",
+    "decimal",
+    "convert"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.sankuai.com/~liaozhongwu/datatype.git"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+  	"test": "mocha test --use_strict"
+  }
+}
