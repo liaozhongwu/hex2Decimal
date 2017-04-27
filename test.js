@@ -14,4 +14,9 @@ describe('hex2decimal', function() {
 		assert.equal(res, '9223372036854775807');
 		done();
 	});
+	it('shold work with hex to binary', function (done) {
+		var res = hex2decimal('7fffffffffffffff', 2);
+		assert.equal(res, '111111111111111111111111111111111111111111111111111111111111111');
+		done();
+	})
 });

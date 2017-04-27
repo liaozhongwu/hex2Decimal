@@ -1,6 +1,6 @@
 {
   "name": "hex2decimal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "convert hex to decimal, support int64",
   "author": {
     "name": "liaozhongwu",

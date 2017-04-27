@@ -18,6 +18,9 @@ npm install hex2decimal
 var hex2decimal = require("hex2decimal");
 hex2decimal('7fffffffffffffff'); // '9223372036854775807'
 hex2decimal(new Buffer([0x7f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff])); // '9223372036854775807'
+
+// binary
+hex2decimal('7fffffffffffffff', 2); // '111111111111111111111111111111111111111111111111111111111111111'
 ```
 
 ## Tests
@@ -25,4 +28,3 @@ hex2decimal(new Buffer([0x7f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff])); // '9
 ```
 npm test
 ```
-	

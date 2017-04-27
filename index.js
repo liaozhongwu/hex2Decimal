@@ -59,7 +59,7 @@
 		}
 		return res.reverse().join('');
 	}
-	function hex2decimal(hex) {
+	function hex2decimal(hex, scale) {
 		if (typeof Buffer !== 'undefined' && hex instanceof Buffer) {
 			hex = hex.toString('hex');
 		}
@@ -69,15 +69,16 @@
 		if (!(/^[0-9a-fA-F]+$/.test(hex))) {
 			return hex;
 		}
+		scale = scale || 10;
 		var res = '0';
 		var i = 0;
 		while(i < hex.length) {
 			var n = hex[hex.length - 1 - i];
 			var j = i;
 			while(j--) {
-				n = multiply(n, 16, 10);
+				n = multiply(n, 16, scale);
 			}
-			res = add(res, n, 10);
+			res = add(res, n, scale);
 			i++;
 		}
 		return res;
