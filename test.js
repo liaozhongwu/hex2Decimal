@@ -1,16 +1,16 @@
 'use strict'
 
 var assert = require('assert');
-var hex2Decimal = require('./index');
+var hex2decimal = require('./index');
 
-describe('hex2Decimal', function() {
-	it('should work as expect', function(done) {
-		var res = hex2Decimal('3fae39239401000');
-		assert.equal(res, '286791743456677888');
+describe('hex2decimal', function() {
+	it('should work with hex string', function(done) {
+		var res = hex2decimal('7fffffffffffffff');
+		assert.equal(res, '9223372036854775807');
 		done();
 	});
-	it('should work as expect', function(done) {
-		var res = hex2Decimal('7fffffffffffffff');
+	it('should work with buffer', function(done) {
+		var res = hex2decimal(new Buffer([0x7f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff]));
 		assert.equal(res, '9223372036854775807');
 		done();
 	});

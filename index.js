@@ -59,9 +59,9 @@
 		}
 		return res.reverse().join('');
 	}
-	function hex2Decimal(hex) {
+	function hex2decimal(hex) {
 		if (typeof Buffer !== 'undefined' && hex instanceof Buffer) {
-			hex = buff.toString('hex');
+			hex = hex.toString('hex');
 		}
 		if (typeof hex !== 'string') {
 			hex = String(hex);
@@ -83,10 +83,10 @@
 		return res;
 	}
 	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = hex2Decimal;
+		module.exports = hex2decimal;
 	} else if ( typeof define === "function" && define.amd ) {
-		define("hex2Decimal", [], function () { return hex2Decimal; })
+		define("hex2decimal", [], function () { return hex2decimal; })
 	} else {
-		window.hex2Decimal = hex2Decimal;
+		window.hex2decimal = hex2decimal;
 	}
 })();

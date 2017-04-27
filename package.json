@@ -1,19 +1,20 @@
 {
-  "name": "hex2Decimal",
-  "version": "0.0.1",
-  "description": "convert hex string to decimal string",
+  "name": "hex2decimal",
+  "version": "0.1.0",
+  "description": "convert hex to decimal, support int64",
   "author": {
     "name": "liaozhongwu",
     "email": "liaozhongwu95@gmail.com"
   },
   "keywords": [
+  	"int64",
     "hex",
     "decimal",
     "convert"
   ],
   "repository": {
     "type": "git",
-    "url": "ssh://git@git.sankuai.com/~liaozhongwu/datatype.git"
+    "url": "https://github.com/liaozhongwu/hex2Decimal"
   },
   "main": "index.js",
   "license": "MIT",
